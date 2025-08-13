@@ -4,8 +4,6 @@
 #include "include/ast.h" // Assuming the ast.h file is in the correct path
 #include "include/parser.h"
 
-RegexPtr parseRegex(Parser& parser);
-
 // Helper function to check if a character is an operator
 bool isOperator(char c) {
     return c == '*' || c == '+' || c == '?' || c == '(' || c == ')' || c == '|';
@@ -49,7 +47,6 @@ const std::string& Parser::getInput() const {
 size_t Parser::getPos() const {
     return pos;
 }
-
 
 
 RegexPtr Parser::parseChar() {
